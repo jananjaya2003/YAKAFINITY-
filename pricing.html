@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing — YAKAFINITY AI</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="logo.png">
+</head>
+<body>
+
+<div class="bg-orbs">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+</div>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="logo.png" alt="YAKAFINITY AI Logo">
+      <span>YAKAFINITY AI</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="nav-dropdown">
+        <a href="services.html">Services ▾</a>
+        <div class="nav-dropdown-menu">
+          <a href="services.html#mobile">🤖 AI Mobile Development</a>
+          <a href="services.html#art">🎨 AI Artists</a>
+          <a href="services.html#video">🎬 AI Video</a>
+          <a href="services.html#audio">🎵 AI Audio</a>
+          <a href="services.html#content">✍️ AI Content</a>
+          <a href="services.html#business">💼 AI for Businesses</a>
+          <a href="services.html#data">📊 Data</a>
+        </div>
+      </li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="pricing.html" class="active">Pricing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" aria-label="Toggle theme">
+        <span class="theme-icon theme-icon-moon">🌙</span>
+        <span class="theme-icon theme-icon-sun">☀️</span>
+      </button>
+      <a href="contact.html" class="btn btn-ghost">Sign In</a>
+      <a href="contact.html" class="btn btn-primary">Get Started</a>
+      <div class="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-nav">
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="about.html">About</a>
+  <a href="pricing.html">Pricing</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <span class="section-label">Simple Pricing</span>
+  <h1 class="section-title" style="font-size:clamp(2.5rem,5vw,4rem)">Transparent Pricing for<br><span style="background:linear-gradient(135deg,#8b5cf6,#ec4899,#f97316);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Every Business</span></h1>
+  <p class="section-subtitle" style="margin:16px auto 0">No hidden fees. No surprise invoices. Choose a plan or get a custom quote — we'll always be upfront about what things cost.</p>
+  
+  <!-- Toggle -->
+  <div style="display:flex;align-items:center;gap:12px;justify-content:center;margin-top:32px">
+    <span style="font-size:0.9rem;color:var(--text-secondary)">Monthly</span>
+    <div style="width:52px;height:28px;background:var(--grad-primary);border-radius:14px;cursor:pointer;position:relative;display:flex;align-items:center;padding:3px" id="billingToggle">
+      <div id="billingThumb" style="width:22px;height:22px;background:white;border-radius:50%;transition:transform 0.3s;transform:translateX(0)"></div>
+    </div>
+    <span style="font-size:0.9rem;color:var(--text-secondary)">Annual <span style="background:var(--grad-secondary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:600">Save 20%</span></span>
+  </div>
+</div>
+
+<section style="padding-top:20px">
+  <!-- RETAINER PLANS -->
+  <div style="margin-bottom:80px">
+    <div class="section-header">
+      <span class="section-label">Monthly Retainers</span>
+      <h2 class="section-title" style="font-size:2.2rem">Ongoing AI Partnership</h2>
+      <p class="section-subtitle">For businesses that need continuous AI support and development.</p>
+    </div>
+    
+    <div class="pricing-grid">
+      <div class="pricing-card reveal">
+        <p class="pricing-plan">Starter</p>
+        <div class="pricing-price" id="starterPrice">$999<span>/mo</span></div>
+        <p class="pricing-desc">Perfect for small businesses dipping their toes into AI transformation.</p>
+        <ul class="pricing-features">
+          <li>Up to 20 hours of AI development</li>
+          <li>1 AI chatbot or integration</li>
+          <li>5 AI art/image pieces</li>
+          <li>Basic AI strategy session</li>
+          <li>Email support</li>
+          <li>Monthly progress report</li>
+        </ul>
+        <a href="contact.html" class="btn btn-ghost" style="width:100%;justify-content:center">Get Started</a>
+      </div>
+      
+      <div class="pricing-card featured reveal">
+        <div class="pricing-badge">Most Popular ✨</div>
+        <p class="pricing-plan">Growth</p>
+        <div class="pricing-price" id="growthPrice">$2,499<span>/mo</span></div>
+        <p class="pricing-desc">For growing companies ready to make AI a competitive advantage.</p>
+        <ul class="pricing-features">
+          <li>Up to 60 hours of AI development</li>
+          <li>3 AI projects (any services)</li>
+          <li>AI video (1 per month)</li>
+          <li>20 AI art/image pieces</li>
+          <li>Monthly AI strategy session</li>
+          <li>Priority Slack support</li>
+          <li>Dedicated AI project manager</li>
+          <li>Weekly progress calls</li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center">Get Started</a>
+      </div>
+      
+      <div class="pricing-card reveal">
+        <p class="pricing-plan">Enterprise</p>
+        <div class="pricing-price">Custom<span></span></div>
+        <p class="pricing-desc">Unlimited AI power for large organizations with complex needs.</p>
+        <ul class="pricing-features">
+          <li>Unlimited hours & projects</li>
+          <li>Dedicated AI team (4+ people)</li>
+          <li>Custom AI agents & fine-tuning</li>
+          <li>Full data science support</li>
+          <li>AI training for your team</li>
+          <li>24/7 priority support</li>
+          <li>Custom SLA agreement</li>
+          <li>On-site workshops available</li>
+        </ul>
+        <a href="contact.html" class="btn btn-ghost" style="width:100%;justify-content:center">Talk to Sales</a>
+      </div>
+    </div>
+  </div>
+  
+  <!-- PROJECT PRICING -->
+  <div style="margin-bottom:80px">
+    <div class="section-header">
+      <span class="section-label">One-Time Projects</span>
+      <h2 class="section-title" style="font-size:2.2rem">Project-Based Pricing</h2>
+      <p class="section-subtitle">Need something specific? Get a fixed-price quote for your project.</p>
+    </div>
+    
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:16px">
+          <div class="card-icon card-icon-bg-1" style="margin-bottom:0">🤖</div>
+          <div style="text-align:right">
+            <div style="font-family:Syne,sans-serif;font-size:1.4rem;font-weight:800;background:var(--grad-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">From $1,500</div>
+          </div>
+        </div>
+        <h3>AI Chatbot</h3>
+        <p>Custom AI chatbot trained on your data, integrated with your platforms. Setup, testing, and deployment included.</p>
+        <a href="contact.html" class="btn btn-ghost" style="margin-top:16px">Get Quote</a>
+      </div>
+      
+      <div class="service-card reveal">
+        <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:16px">
+          <div class="card-icon card-icon-bg-2" style="margin-bottom:0">🎨</div>
+          <div style="text-align:right">
+            <div style="font-family:Syne,sans-serif;font-size:1.4rem;font-weight:800;background:var(--grad-secondary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">From $200</div>
+          </div>
+        </div>
+        <h3>AI Art Package</h3>
+        <p>20+ high-quality AI generated images, customized to your brand, ready for marketing and commercial use.</p>
+        <a href="contact.html" class="btn btn-ghost" style="margin-top:16px">Get Quote</a>
+      </div>
+      
+      <div class="service-card reveal">
+        <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:16px">
+          <div class="card-icon card-icon-bg-3" style="margin-bottom:0">🎬</div>
+          <div style="text-align:right">
+            <div style="font-family:Syne,sans-serif;font-size:1.4rem;font-weight:800;background:var(--grad-tertiary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">From $500</div>
+          </div>
+        </div>
+        <h3>AI Music Video</h3>
+        <p>Professional AI-generated music video, 2-4 minutes, fully edited and delivered in 4K. Multiple revision rounds.</p>
+        <a href="contact.html" class="btn btn-ghost" style="margin-top:16px">Get Quote</a>
+      </div>
+      
+      <div class="service-card reveal">
+        <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:16px">
+          <div class="card-icon card-icon-bg-4" style="margin-bottom:0">🎤</div>
+          <div style="text-align:right">
+            <div style="font-family:Syne,sans-serif;font-size:1.4rem;font-weight:800;background:var(--grad-secondary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">From $300</div>
+          </div>
+        </div>
+        <h3>Voice Synthesis</h3>
+        <p>Custom AI voice clone creation, 10+ audio scripts recorded, integration guide, and commercial license included.</p>
+        <a href="contact.html" class="btn btn-ghost" style="margin-top:16px">Get Quote</a>
+      </div>
+      
+      <div class="service-card reveal">
+        <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:16px">
+          <div class="card-icon card-icon-bg-7" style="margin-bottom:0">📊</div>
+          <div style="text-align:right">
+            <div style="font-family:Syne,sans-serif;font-size:1.4rem;font-weight:800;background:var(--grad-tertiary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">From $2,000</div>
+          </div>
+        </div>
+        <h3>ML Model Development</h3>
+        <p>Custom machine learning model built on your data — from data prep to training, validation, and deployment-ready packaging.</p>
+        <a href="contact.html" class="btn btn-ghost" style="margin-top:16px">Get Quote</a>
+      </div>
+      
+      <div class="service-card reveal">
+        <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:16px">
+          <div class="card-icon card-icon-bg-6" style="margin-bottom:0">🎓</div>
+          <div style="text-align:right">
+            <div style="font-family:Syne,sans-serif;font-size:1.4rem;font-weight:800;background:var(--grad-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">From $750</div>
+          </div>
+        </div>
+        <h3>AI Team Training</h3>
+        <p>Half-day or full-day AI training workshop for your team. Hands-on, practical, and tailored to your industry and tools.</p>
+        <a href="contact.html" class="btn btn-ghost" style="margin-top:16px">Get Quote</a>
+      </div>
+    </div>
+  </div>
+  
+  <!-- FAQ -->
+  <div style="max-width:780px;margin:0 auto">
+    <div class="section-header" style="text-align:center">
+      <span class="section-label">Questions</span>
+      <h2 class="section-title" style="font-size:2.2rem">Frequently Asked</h2>
+    </div>
+    
+    <div id="faqList" style="display:flex;flex-direction:column;gap:12px"></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-section">
+  <div class="cta-inner">
+    <span class="section-label">Still Unsure?</span>
+    <h2>Get a Free Custom <span class="gradient-text">Quote</span></h2>
+    <p>Tell us about your project and we'll provide a detailed, transparent proposal — no commitment required.</p>
+    <div class="cta-buttons">
+      <a href="contact.html" class="btn btn-primary btn-lg">Request Free Quote</a>
+      <a href="index.html" class="btn btn-ghost btn-lg">Chat with YAKA</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="nav-logo">
+          <img src="logo.png" alt="YAKAFINITY AI" style="width:40px">
+          <span style="font-family:Syne,sans-serif;font-weight:800;font-size:1.1rem;background:linear-gradient(135deg,#8b5cf6,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">YAKAFINITY AI</span>
+        </div>
+        <p>Premium AI services for businesses ready to lead the future.</p>
+        <div class="footer-social">
+          <span class="social-link">𝕏</span>
+          <span class="social-link">in</span>
+          <span class="social-link">▶</span>
+          <span class="social-link">📸</span>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="services.html#mobile">AI Mobile Dev</a></li>
+          <li><a href="services.html#art">AI Artists</a></li>
+          <li><a href="services.html#video">AI Video</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Solutions</h5>
+        <ul>
+          <li><a href="services.html#business">AI for Business</a></li>
+          <li><a href="services.html#data">Data Science</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 YAKAFINITY AI. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<script>
+// Billing toggle
+const toggle = document.getElementById('billingToggle');
+const thumb = document.getElementById('billingThumb');
+const starterPrice = document.getElementById('starterPrice');
+const growthPrice = document.getElementById('growthPrice');
+let annual = false;
+
+toggle.addEventListener('click', () => {
+  annual = !annual;
+  thumb.style.transform = annual ? 'translateX(24px)' : 'translateX(0)';
+  starterPrice.innerHTML = annual ? '$799<span>/mo</span>' : '$999<span>/mo</span>';
+  growthPrice.innerHTML = annual ? '$1,999<span>/mo</span>' : '$2,499<span>/mo</span>';
+});
+
+// FAQ
+const faqs = [
+  { q: "How does the free discovery call work?", a: "It's a 30-minute video call with one of our AI specialists. We listen to your goals, ask clarifying questions, and give you honest advice — with zero sales pressure. After the call, we'll send a detailed proposal if relevant." },
+  { q: "Do you work with businesses outside my industry?", a: "Absolutely. We've delivered AI solutions for e-commerce, healthcare, finance, real estate, entertainment, education, and more. AI principles apply across industries — and we adapt our approach to your specific context." },
+  { q: "What if I'm not happy with the results?", a: "We offer a revision process for all projects and clear milestones for retainer work. If we miss the mark, we fix it — that's our commitment. We've maintained a 98.5% client satisfaction rate because we don't close a project until you're genuinely happy." },
+  { q: "How quickly can you start?", a: "For most projects, we can begin within 3-5 business days of contract signing. For urgent projects, ask us about expedited onboarding — we often have capacity for fast-track starts." },
+  { q: "Can I mix and match services?", a: "Yes! Many of our best client engagements combine multiple services — for example, an AI chatbot + AI art for branding + data analytics dashboard. Talk to us and we'll design the right package for your needs." },
+  { q: "Do you offer white-label AI services?", a: "Yes. We offer white-label partnerships for agencies and consultancies who want to offer AI services to their own clients. Ask about our partner program for special pricing and terms." }
+];
+
+const faqContainer = document.getElementById('faqList');
+faqs.forEach((faq, i) => {
+  const item = document.createElement('div');
+  item.className = 'service-card reveal';
+  item.style.cssText = 'cursor:pointer;user-select:none';
+  item.innerHTML = `
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:16px">
+      <h4 style="font-size:1rem;font-weight:600">${faq.q}</h4>
+      <span class="faq-icon" style="font-size:1.2rem;flex-shrink:0;transition:transform 0.3s">+</span>
+    </div>
+    <div class="faq-answer" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease,margin-top 0.3s">
+      <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.7">${faq.a}</p>
+    </div>
+  `;
+  
+  item.addEventListener('click', () => {
+    const answer = item.querySelector('.faq-answer');
+    const icon = item.querySelector('.faq-icon');
+    const isOpen = answer.style.maxHeight !== '0px' && answer.style.maxHeight !== '';
+    
+    if (isOpen) {
+      answer.style.maxHeight = '0';
+      answer.style.marginTop = '0';
+      icon.style.transform = 'rotate(0deg)';
+      icon.textContent = '+';
+    } else {
+      answer.style.maxHeight = '200px';
+      answer.style.marginTop = '16px';
+      icon.style.transform = 'rotate(45deg)';
+      icon.textContent = '+';
+    }
+  });
+  
+  faqContainer.appendChild(item);
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YAKAFINITY AI — Premium AI Services & Solutions</title>
+  <meta name="description" content="YAKAFINITY AI delivers cutting-edge AI services: mobile development, AI art, video, audio, content, and data solutions for modern businesses.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="logo.png">
+</head>
+<body>
+
+<!-- Background Orbs -->
+<div class="bg-orbs">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="logo.png" alt="YAKAFINITY AI Logo">
+      <span>YAKAFINITY AI</span>
+    </a>
+    
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li class="nav-dropdown">
+        <a href="services.html">Services ▾</a>
+        <div class="nav-dropdown-menu">
+          <a href="services.html#mobile">🤖 AI Mobile Development</a>
+          <a href="services.html#art">🎨 AI Artists</a>
+          <a href="services.html#video">🎬 AI Video</a>
+          <a href="services.html#audio">🎵 AI Audio</a>
+          <a href="services.html#content">✍️ AI Content</a>
+          <a href="services.html#business">💼 AI for Businesses</a>
+          <a href="services.html#data">📊 Data</a>
+        </div>
+      </li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    
+    <div class="nav-actions">
+      <button class="theme-toggle" aria-label="Toggle theme">
+        <span class="theme-icon theme-icon-moon">🌙</span>
+        <span class="theme-icon theme-icon-sun">☀️</span>
+      </button>
+      <a href="contact.html" class="btn btn-ghost">Sign In</a>
+      <a href="contact.html" class="btn btn-primary">Get Started</a>
+      <div class="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav">
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="about.html">About</a>
+  <a href="pricing.html">Pricing</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html" style="margin-top: 20px;">
+    <span class="btn btn-primary" style="display:inline-flex">Get Started →</span>
+  </a>
+</div>
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="hero-badge">
+    <span class="hero-badge-dot"></span>
+    Trusted by 500+ Businesses Worldwide
+  </div>
+  
+  <h1 class="hero-title">
+    The Future of AI is<br>
+    <span class="gradient-text">Already Here</span>
+  </h1>
+  
+  <p class="hero-subtitle">
+    YAKAFINITY AI delivers premium artificial intelligence services — from apps and automation to art, video, and data. Transform your business with the power of AI.
+  </p>
+  
+  <div class="hero-cta">
+    <a href="services.html" class="btn btn-primary btn-lg">
+      Explore Services
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+    <a href="contact.html" class="btn btn-ghost btn-lg">Book a Free Call</a>
+  </div>
+  
+  <!-- AI CHAT WINDOW -->
+  <div class="ai-chat-window">
+    <div class="chat-container">
+      <div class="chat-header">
+        <img src="logo.png" alt="YAKA" class="chat-logo">
+        <div class="chat-header-info">
+          <h4>YAKA — YAKAFINITY AI Assistant</h4>
+          <p><span class="chat-online-dot"></span> Online & Ready</p>
+        </div>
+        <div class="chat-header-actions">
+          <span style="background:#ff5f57"></span>
+          <span style="background:#febc2e"></span>
+          <span style="background:#28c840"></span>
+        </div>
+      </div>
+      
+      <div class="chat-messages" id="chatMessages">
+        <div class="chat-msg ai">
+          <div class="chat-avatar"><img src="logo.png" alt="YAKA"></div>
+          <div class="chat-bubble">
+            👋 Hey there! I'm <strong>YAKA</strong>, your AI guide at YAKAFINITY. Tell me, <em>what do you want?</em> — a smarter app, AI art, automated workflows, or something else entirely?
+          </div>
+        </div>
+      </div>
+      
+      <div class="chat-input-area">
+        <textarea 
+          id="chatInput" 
+          class="chat-input" 
+          placeholder="Ask YAKA anything... (e.g. 'I need an AI chatbot for my business')"
+          rows="1"
+        ></textarea>
+        <button id="chatSend" class="chat-send-btn" aria-label="Send message">
+          <svg viewBox="0 0 24 24" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-section">
+  <div class="marquee-track" id="marqueeTrack">
+    <span class="marquee-item">🤖 AI Mobile Apps<span class="marquee-dot"></span></span>
+    <span class="marquee-item">🎨 ComfyUI Workflows<span class="marquee-dot"></span></span>
+    <span class="marquee-item">🎬 AI Music Videos<span class="marquee-dot"></span></span>
+    <span class="marquee-item">🎵 Voice Synthesis<span class="marquee-dot"></span></span>
+    <span class="marquee-item">📊 Data Analytics<span class="marquee-dot"></span></span>
+    <span class="marquee-item">💼 AI Consulting<span class="marquee-dot"></span></span>
+    <span class="marquee-item">🌐 AI Websites<span class="marquee-dot"></span></span>
+    <span class="marquee-item">🤖 AI Agents<span class="marquee-dot"></span></span>
+    <span class="marquee-item">✍️ Custom Prompts<span class="marquee-dot"></span></span>
+    <span class="marquee-item">🎯 AI Fine-Tuning<span class="marquee-dot"></span></span>
+    <!-- Duplicate for seamless loop -->
+    <span class="marquee-item">🤖 AI Mobile Apps<span class="marquee-dot"></span></span>
+    <span class="marquee-item">🎨 ComfyUI Workflows<span class="marquee-dot"></span></span>
+    <span class="marquee-item">🎬 AI Music Videos<span class="marquee-dot"></span></span>
+    <span class="marquee-item">🎵 Voice Synthesis<span class="marquee-dot"></span></span>
+    <span class="marquee-item">📊 Data Analytics<span class="marquee-dot"></span></span>
+    <span class="marquee-item">💼 AI Consulting<span class="marquee-dot"></span></span>
+    <span class="marquee-item">🌐 AI Websites<span class="marquee-dot"></span></span>
+    <span class="marquee-item">🤖 AI Agents<span class="marquee-dot"></span></span>
+    <span class="marquee-item">✍️ Custom Prompts<span class="marquee-dot"></span></span>
+    <span class="marquee-item">🎯 AI Fine-Tuning<span class="marquee-dot"></span></span>
+  </div>
+</div>
+
+<!-- SERVICES OVERVIEW -->
+<section>
+  <div class="section-header">
+    <span class="section-label">What We Build</span>
+    <h2 class="section-title">AI Services That Drive<br>Real Results</h2>
+    <p class="section-subtitle">From intelligent applications to AI-generated content — we cover every dimension of artificial intelligence for your business.</p>
+  </div>
+  
+  <div class="services-grid">
+    <a href="services.html#mobile" class="service-card reveal">
+      <div class="card-arrow">→</div>
+      <div class="card-icon card-icon-bg-1">🤖</div>
+      <h3>AI Mobile Development</h3>
+      <p>Build intelligent mobile apps, websites, chatbots, and integrations powered by cutting-edge AI models and custom agents.</p>
+      <div class="card-tags">
+        <span class="tag">Mobile Apps</span>
+        <span class="tag">AI Chatbots</span>
+        <span class="tag">AI Agents</span>
+        <span class="tag">Fine-Tuning</span>
+      </div>
+    </a>
+    
+    <a href="services.html#art" class="service-card reveal">
+      <div class="card-arrow">→</div>
+      <div class="card-icon card-icon-bg-2">🎨</div>
+      <h3>AI Artists</h3>
+      <p>Stunning AI-generated visuals, avatar designs, and custom ComfyUI workflows crafted by our expert AI artists.</p>
+      <div class="card-tags">
+        <span class="tag">Midjourney</span>
+        <span class="tag">Stable Diffusion</span>
+        <span class="tag">ComfyUI</span>
+        <span class="tag">Avatars</span>
+      </div>
+    </a>
+    
+    <a href="services.html#video" class="service-card reveal">
+      <div class="card-arrow">→</div>
+      <div class="card-icon card-icon-bg-3">🎬</div>
+      <h3>AI Video</h3>
+      <p>Professional AI music videos, video avatars, and UGC content that captures attention and drives engagement at scale.</p>
+      <div class="card-tags">
+        <span class="tag">Music Videos</span>
+        <span class="tag">AI Avatars</span>
+        <span class="tag">UGC</span>
+      </div>
+    </a>
+    
+    <a href="services.html#audio" class="service-card reveal">
+      <div class="card-arrow">→</div>
+      <div class="card-icon card-icon-bg-4">🎵</div>
+      <h3>AI Audio</h3>
+      <p>Lifelike voice synthesis, text-to-speech solutions, and AI audio production for podcasts, ads, and apps.</p>
+      <div class="card-tags">
+        <span class="tag">Voice Synthesis</span>
+        <span class="tag">Text-to-Speech</span>
+        <span class="tag">Audio AI</span>
+      </div>
+    </a>
+    
+    <a href="services.html#content" class="service-card reveal">
+      <div class="card-arrow">→</div>
+      <div class="card-icon card-icon-bg-5">✍️</div>
+      <h3>AI Content</h3>
+      <p>Expert AI content editing, custom writing prompts, and content strategies that convert readers into customers.</p>
+      <div class="card-tags">
+        <span class="tag">Content Editing</span>
+        <span class="tag">Custom Prompts</span>
+        <span class="tag">Strategy</span>
+      </div>
+    </a>
+    
+    <a href="services.html#business" class="service-card reveal">
+      <div class="card-arrow">→</div>
+      <div class="card-icon card-icon-bg-6">💼</div>
+      <h3>AI for Businesses</h3>
+      <p>Strategic AI consulting, implementation roadmaps, and AI training programs to transform how your organization operates.</p>
+      <div class="card-tags">
+        <span class="tag">AI Consulting</span>
+        <span class="tag">AI Strategy</span>
+        <span class="tag">AI Lessons</span>
+      </div>
+    </a>
+    
+    <a href="services.html#data" class="service-card reveal">
+      <div class="card-arrow">→</div>
+      <div class="card-icon card-icon-bg-7">📊</div>
+      <h3>Data</h3>
+      <p>Advanced data science, machine learning models, analytics dashboards, and visualizations that turn raw data into gold.</p>
+      <div class="card-tags">
+        <span class="tag">Data Science</span>
+        <span class="tag">ML Models</span>
+        <span class="tag">Analytics</span>
+        <span class="tag">Visualization</span>
+      </div>
+    </a>
+    
+    <!-- CTA Card -->
+    <div class="service-card reveal" style="background: linear-gradient(135deg, rgba(139,92,246,0.15), rgba(236,72,153,0.1)); border-color: rgba(139,92,246,0.25); display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; gap:20px;">
+      <img src="logo.png" alt="YAKAFINITY" style="width:64px; filter:drop-shadow(0 0 20px rgba(139,92,246,0.5))">
+      <h3>Not Sure What You Need?</h3>
+      <p style="margin-bottom:0;">Let YAKA guide you. Chat with our AI or book a free discovery call.</p>
+      <a href="contact.html" class="btn btn-primary">Book Free Call</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-section">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <span class="stat-number" data-count="500" data-suffix="+">500+</span>
+      <p class="stat-label">Clients Served</p>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number" data-count="1200" data-suffix="+">1200+</span>
+      <p class="stat-label">Projects Delivered</p>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number" data-count="98.5" data-suffix="%">98.5%</span>
+      <p class="stat-label">Client Satisfaction</p>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number" data-count="7" data-suffix=" AI Domains">7</span>
+      <p class="stat-label">AI Service Categories</p>
+    </div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section>
+  <div class="section-header">
+    <span class="section-label">How We Work</span>
+    <h2 class="section-title">From Vision to Reality<br>in Four Steps</h2>
+  </div>
+  
+  <div class="process-steps">
+    <div class="process-step reveal">
+      <div class="step-number">01</div>
+      <h4>Discovery Call</h4>
+      <p>We learn about your goals, challenges, and vision. Zero sales pressure — just clarity.</p>
+    </div>
+    <div class="process-step reveal">
+      <div class="step-number">02</div>
+      <h4>AI Strategy</h4>
+      <p>Our experts craft a custom AI roadmap tailored to your business and budget.</p>
+    </div>
+    <div class="process-step reveal">
+      <div class="step-number">03</div>
+      <h4>Build & Deploy</h4>
+      <p>Our team executes with precision — delivering fast, high-quality AI solutions.</p>
+    </div>
+    <div class="process-step reveal">
+      <div class="step-number">04</div>
+      <h4>Scale & Optimize</h4>
+      <p>We monitor, iterate, and optimize your AI systems as your business grows.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section>
+  <div class="section-header">
+    <span class="section-label">Client Love</span>
+    <h2 class="section-title">What Our Clients Say</h2>
+  </div>
+  
+  <div class="testimonials-grid">
+    <div class="testimonial-card reveal">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">"YAKAFINITY built us an AI chatbot that handles 80% of our customer inquiries automatically. We've saved over $50k in support costs this year alone."</p>
+      <div class="testimonial-author">
+        <div class="author-avatar" style="background:linear-gradient(135deg,#8b5cf6,#ec4899)">👩‍💼</div>
+        <div>
+          <p class="author-name">Sarah Chen</p>
+          <p class="author-role">CEO, TechFlow Inc.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="testimonial-card reveal">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">"The AI art and video content they created for our brand went viral. 2.3M views in the first week. YAKAFINITY doesn't just deliver — they overdeliver."</p>
+      <div class="testimonial-author">
+        <div class="author-avatar" style="background:linear-gradient(135deg,#f97316,#ec4899)">👨‍🎨</div>
+        <div>
+          <p class="author-name">Marcus Rivera</p>
+          <p class="author-role">Creative Dir., VibeBrand</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="testimonial-card reveal">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">"Their data science team built us a predictive ML model that increased our sales forecasting accuracy by 40%. Game-changing for our planning."</p>
+      <div class="testimonial-author">
+        <div class="author-avatar" style="background:linear-gradient(135deg,#06b6d4,#8b5cf6)">👨‍💻</div>
+        <div>
+          <p class="author-name">Amit Patel</p>
+          <p class="author-role">COO, DataDriven Co.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-section">
+  <div class="cta-inner">
+    <span class="section-label">Ready to Begin?</span>
+    <h2>Start Your AI Journey<br><span class="gradient-text">Today</span></h2>
+    <p>Join hundreds of businesses already growing smarter with YAKAFINITY AI. Your first consultation is completely free.</p>
+    <div class="cta-buttons">
+      <a href="contact.html" class="btn btn-primary btn-lg">Book Free Discovery Call</a>
+      <a href="services.html" class="btn btn-ghost btn-lg">View All Services</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="nav-logo">
+          <img src="logo.png" alt="YAKAFINITY AI" style="width:40px">
+          <span style="font-family:Syne,sans-serif;font-weight:800;font-size:1.1rem;background:linear-gradient(135deg,#8b5cf6,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">YAKAFINITY AI</span>
+        </div>
+        <p>Premium AI services and solutions for businesses ready to lead the future. We don't just use AI — we master it for you.</p>
+        <div class="footer-social">
+          <span class="social-link">𝕏</span>
+          <span class="social-link">in</span>
+          <span class="social-link">▶</span>
+          <span class="social-link">📸</span>
+        </div>
+      </div>
+      
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="services.html#mobile">AI Mobile Dev</a></li>
+          <li><a href="services.html#art">AI Artists</a></li>
+          <li><a href="services.html#video">AI Video</a></li>
+          <li><a href="services.html#audio">AI Audio</a></li>
+          <li><a href="services.html#content">AI Content</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">Case Studies</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h5>Solutions</h5>
+        <ul>
+          <li><a href="services.html#business">AI for Business</a></li>
+          <li><a href="services.html#data">Data Science</a></li>
+          <li><a href="services.html#mobile">AI Chatbots</a></li>
+          <li><a href="services.html#mobile">AI Agents</a></li>
+          <li><a href="services.html#mobile">Fine-Tuning</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+          <li><a href="#">GDPR</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>© 2025 YAKAFINITY AI. All rights reserved. Powered by the future.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
