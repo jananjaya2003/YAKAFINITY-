@@ -1,0 +1,22 @@
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/"
+  to = "/Yakafinity%20Website/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/admin"
+  to = "/Yakafinity%20Website/admin-login.html"
+  status = 200
+
+[[redirects]]
+  from = "/client"
+  to = "/Yakafinity%20Website/client-portal.html"
+  status = 200
+
+[[redirects]]
+  from = "/service"
+  to = "/Yakafinity%20Website/service-detail.html"
+  status = 200

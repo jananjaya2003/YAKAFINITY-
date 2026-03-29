@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YAKAFINITY Admin</title>
+  <meta name="robots" content="noindex,nofollow" />
+  <link rel="icon" type="image/png" href="../admin-images/site-admin/brand/logo.png" />
+  <link rel="apple-touch-icon" href="../admin-images/site-admin/brand/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="admin-body">
+  <header class="site-header admin-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">
+        <img id="adminBrandLogo" src="../admin-images/site-admin/brand/logo.png" alt="YAKAFINITY logo" />
+        <span>YAKAFINITY Admin</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">View Site</a>
+        <button id="adminLogoutBtn" class="btn btn-sm btn-ghost" type="button">Logout</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Website Management</p>
+        <h1>Manage Services, Orders, and Full Site Content</h1>
+      </div>
+
+      <section class="admin-card">
+        <div class="admin-flex-head">
+          <div>
+            <h2>Site Image Folder</h2>
+            <p class="muted">Connect the `admin-images/site-admin` folder so uploads are saved as real project files.</p>
+          </div>
+          <button class="btn btn-ghost" id="connectSiteImageFolderBtn" type="button">Connect Folder</button>
+        </div>
+        <p id="siteImageFolderStatus" class="form-message"></p>
+      </section>
+
+      <section class="admin-stats-grid" id="adminStats"></section>
+
+      <section class="admin-card admin-highlight">
+        <div class="admin-flex-head">
+          <h2>Submitted Orders Received</h2>
+          <p class="muted">New orders arrive here first. Mark them as received to move into workflow.</p>
+        </div>
+        <div id="ordersInboxList" class="admin-list"></div>
+      </section>
+
+      <section class="admin-card">
+        <h2>Brand & Business Details</h2>
+        <form id="brandForm" class="admin-grid-form">
+          <div class="field">
+            <label for="companyName">Company Name</label>
+            <input id="companyName" required />
+          </div>
+          <div class="field">
+            <label for="companyDomain">Domain</label>
+            <input id="companyDomain" />
+          </div>
+          <div class="field field-full">
+            <label for="companyTagline">Tagline</label>
+            <input id="companyTagline" />
+          </div>
+          <div class="field field-full">
+            <label for="companyLogoFile">Upload Logo Image</label>
+            <input id="companyLogoFile" type="file" accept=".jpg,.jpeg,.png,.webp,.gif,.bmp,.svg,.avif,.jfif,image/*" />
+            <div class="upload-actions">
+              <button class="btn btn-ghost btn-sm" id="removeCompanyLogoBtn" type="button">Remove Logo</button>
+            </div>
+            <img id="companyLogoPreview" class="upload-preview" alt="Company logo preview" />
+          </div>
+          <button class="btn" type="submit">Save Details</button>
+        </form>
+      </section>
+
+      <section class="admin-card">
+        <h2>Site Page Content</h2>
+        <form id="siteContentForm" class="admin-grid-form">
+          <div class="field field-full">
+            <label for="homeHeroEyebrowInput">Home Hero Eyebrow</label>
+            <input id="homeHeroEyebrowInput" />
+          </div>
+          <div class="field field-full">
+            <label for="homeHeroTitleInput">Home Hero Title</label>
+            <input id="homeHeroTitleInput" />
+          </div>
+          <div class="field field-full">
+            <label for="homeHeroIntroInput">Home Hero Intro</label>
+            <textarea id="homeHeroIntroInput" rows="3"></textarea>
+          </div>
+          <div class="field">
+            <label for="homePrimaryCtaLabelInput">Home Primary CTA Label</label>
+            <input id="homePrimaryCtaLabelInput" />
+          </div>
+          <div class="field">
+            <label for="homePrimaryCtaHrefInput">Home Primary CTA Link</label>
+            <input id="homePrimaryCtaHrefInput" />
+          </div>
+          <div class="field">
+            <label for="homeSecondaryCtaLabelInput">Home Secondary CTA Label</label>
+            <input id="homeSecondaryCtaLabelInput" />
+          </div>
+          <div class="field">
+            <label for="homeSecondaryCtaHrefInput">Home Secondary CTA Link</label>
+            <input id="homeSecondaryCtaHrefInput" />
+          </div>
+          <div class="field field-full">
+            <label for="homeTrustItemsInput">Home Trust Items (comma separated)</label>
+            <input id="homeTrustItemsInput" />
+          </div>
+          <div class="field">
+            <label for="homeExpertiseTitleInput">Home Expertise Title</label>
+            <input id="homeExpertiseTitleInput" />
+          </div>
+          <div class="field field-full">
+            <label for="homeExpertiseItemsInput">Home Expertise Items (comma separated)</label>
+            <input id="homeExpertiseItemsInput" />
+          </div>
+          <div class="field">
+            <label for="homeFeaturedEyebrowInput">Featured Eyebrow</label>
+            <input id="homeFeaturedEyebrowInput" />
+          </div>
+          <div class="field">
+            <label for="homeFeaturedTitleInput">Featured Title</label>
+            <input id="homeFeaturedTitleInput" />
+          </div>
+          <div class="field">
+            <label for="homeProcessEyebrowInput">Home Process Eyebrow</label>
+            <input id="homeProcessEyebrowInput" />
+          </div>
+          <div class="field">
+            <label for="homeProcessTitleInput">Home Process Title</label>
+            <input id="homeProcessTitleInput" />
+          </div>
+          <div class="field">
+            <label for="homeProcessStep1Title">Home Step 1 Title</label>
+            <input id="homeProcessStep1Title" />
+          </div>
+          <div class="field">
+            <label for="homeProcessStep1Text">Home Step 1 Text</label>
+            <input id="homeProcessStep1Text" />
+          </div>
+          <div class="field">
+            <label for="homeProcessStep2Title">Home Step 2 Title</label>
+            <input id="homeProcessStep2Title" />
+          </div>
+          <div class="field">
+            <label for="homeProcessStep2Text">Home Step 2 Text</label>
+            <input id="homeProcessStep2Text" />
+          </div>
+          <div class="field">
+            <label for="homeProcessStep3Title">Home Step 3 Title</label>
+            <input id="homeProcessStep3Title" />
+          </div>
+          <div class="field">
+            <label for="homeProcessStep3Text">Home Step 3 Text</label>
+            <input id="homeProcessStep3Text" />
+          </div>
+          <div class="field">
+            <label for="homeFinalEyebrowInput">Home Final Eyebrow</label>
+            <input id="homeFinalEyebrowInput" />
+          </div>
+          <div class="field">
+            <label for="homeFinalTitleInput">Home Final Title</label>
+            <input id="homeFinalTitleInput" />
+          </div>
+          <div class="field field-full">
+            <label for="homeFinalTextInput">Home Final Text</label>
+            <textarea id="homeFinalTextInput" rows="3"></textarea>
+          </div>
+          <div class="field">
+            <label for="homeFinalButtonLabelInput">Home Final Button Label</label>
+            <input id="homeFinalButtonLabelInput" />
+          </div>
+          <div class="field">
+            <label for="homeFinalButtonHrefInput">Home Final Button Link</label>
+            <input id="homeFinalButtonHrefInput" />
+          </div>
+
+          <div class="field">
+            <label for="aboutHeroEyebrowInput">About Hero Eyebrow</label>
+            <input id="aboutHeroEyebrowInput" />
+          </div>
+          <div class="field">
+            <label for="aboutHeroTitleInput">About Hero Title</label>
+            <input id="aboutHeroTitleInput" />
+          </div>
+          <div class="field field-full">
+            <label for="aboutHeroIntroInput">About Hero Intro</label>
+            <textarea id="aboutHeroIntroInput" rows="3"></textarea>
+          </div>
+          <div class="field">
+            <label for="aboutCard1Title">About Card 1 Title</label>
+            <input id="aboutCard1Title" />
+          </div>
+          <div class="field">
+            <label for="aboutCard1Text">About Card 1 Text</label>
+            <input id="aboutCard1Text" />
+          </div>
+          <div class="field">
+            <label for="aboutCard2Title">About Card 2 Title</label>
+            <input id="aboutCard2Title" />
+          </div>
+          <div class="field">
+            <label for="aboutCard2Text">About Card 2 Text</label>
+            <input id="aboutCard2Text" />
+          </div>
+          <div class="field">
+            <label for="aboutCard3Title">About Card 3 Title</label>
+            <input id="aboutCard3Title" />
+          </div>
+          <div class="field">
+            <label for="aboutCard3Text">About Card 3 Text</label>
+            <input id="aboutCard3Text" />
+          </div>
+          <div class="field">
+            <label for="aboutProcessEyebrowInput">About Process Eyebrow</label>
+            <input id="aboutProcessEyebrowInput" />
+          </div>
+          <div class="field">
+            <label for="aboutProcessTitleInput">About Process Title</label>
+            <input id="aboutProcessTitleInput" />
+          </div>
+          <div class="field">
+            <label for="aboutProcessStep1Title">About Step 1 Title</label>
+            <input id="aboutProcessStep1Title" />
+          </div>
+          <div class="field">
+            <label for="aboutProcessStep1Text">About Step 1 Text</label>
+            <input id="aboutProcessStep1Text" />
+          </div>
+          <div class="field">
+            <label for="aboutProcessStep2Title">About Step 2 Title</label>
+            <input id="aboutProcessStep2Title" />
+          </div>
+          <div class="field">
+            <label for="aboutProcessStep2Text">About Step 2 Text</label>
+            <input id="aboutProcessStep2Text" />
+          </div>
+          <div class="field">
+            <label for="aboutProcessStep3Title">About Step 3 Title</label>
+            <input id="aboutProcessStep3Title" />
+          </div>
+          <div class="field">
+            <label for="aboutProcessStep3Text">About Step 3 Text</label>
+            <input id="aboutProcessStep3Text" />
+          </div>
+          <div class="field">
+            <label for="aboutOwnerEyebrowInput">Owner Eyebrow</label>
+            <input id="aboutOwnerEyebrowInput" />
+          </div>
+          <div class="field">
+            <label for="aboutOwnerTitleInput">Owner Title</label>
+            <input id="aboutOwnerTitleInput" />
+          </div>
+          <div class="field field-full">
+            <label for="aboutOwnerTextInput">Owner Intro</label>
+            <textarea id="aboutOwnerTextInput" rows="3"></textarea>
+          </div>
+          <div class="field field-full">
+            <label for="aboutOwnerCardTextInput">Owner Card Text</label>
+            <textarea id="aboutOwnerCardTextInput" rows="2"></textarea>
+          </div>
+          <div class="field">
+            <label for="aboutOwnerButtonLabelInput">Owner Button Label</label>
+            <input id="aboutOwnerButtonLabelInput" />
+          </div>
+          <div class="field">
+            <label for="aboutOwnerButtonHrefInput">Owner Button Link</label>
+            <input id="aboutOwnerButtonHrefInput" />
+          </div>
+
+          <div class="field">
+            <label for="servicesPageEyebrowInput">Services Page Eyebrow</label>
+            <input id="servicesPageEyebrowInput" />
+          </div>
+          <div class="field">
+            <label for="servicesPageTitleInput">Services Page Title</label>
+            <input id="servicesPageTitleInput" />
+          </div>
+          <div class="field field-full">
+            <label for="servicesPageIntroInput">Services Page Intro</label>
+            <textarea id="servicesPageIntroInput" rows="2"></textarea>
+          </div>
+
+          <div class="field">
+            <label for="contactPageEyebrowInput">Contact Page Eyebrow</label>
+            <input id="contactPageEyebrowInput" />
+          </div>
+          <div class="field">
+            <label for="contactPageTitleInput">Contact Page Title</label>
+            <input id="contactPageTitleInput" />
+          </div>
+          <div class="field field-full">
+            <label for="contactPageIntroInput">Contact Page Intro</label>
+            <textarea id="contactPageIntroInput" rows="2"></textarea>
+          </div>
+
+          <div class="field">
+            <label for="footerTaglineInput">Footer Tagline</label>
+            <input id="footerTaglineInput" />
+          </div>
+          <div class="field">
+            <label for="footerContactLineInput">Footer Secondary Text</label>
+            <input id="footerContactLineInput" />
+          </div>
+          <div class="field">
+            <label for="footerServicesLinkLabelInput">Footer Link Label</label>
+            <input id="footerServicesLinkLabelInput" />
+          </div>
+          <div class="field">
+            <label for="footerServicesLinkHrefInput">Footer Link Href</label>
+            <input id="footerServicesLinkHrefInput" />
+          </div>
+          <div class="field">
+            <label for="footerDomainPrefixInput">Footer Domain Prefix</label>
+            <input id="footerDomainPrefixInput" />
+          </div>
+          <button class="btn" type="submit">Save Site Content</button>
+        </form>
+      </section>
+
+      <section class="admin-card">
+        <h2>Admin Access</h2>
+        <form id="adminAccessForm" class="admin-grid-form">
+          <div class="field">
+            <label for="newAdminUser">New Username</label>
+            <input id="newAdminUser" required />
+          </div>
+          <div class="field">
+            <label for="newAdminPass">New Password</label>
+            <input id="newAdminPass" type="password" required />
+          </div>
+          <button class="btn" type="submit">Update Login</button>
+          <p id="adminAccessMsg" class="form-message"></p>
+        </form>
+      </section>
+
+      <section class="admin-card">
+        <div class="admin-flex-head">
+          <h2>Service Categories</h2>
+          <button class="btn btn-ghost" id="resetServicesBtn" type="button">Reset to Default</button>
+        </div>
+        <form id="serviceForm" class="admin-grid-form">
+          <input id="serviceId" type="hidden" />
+          <div class="field">
+            <label for="serviceTitle">Title</label>
+            <input id="serviceTitle" required />
+          </div>
+          <div class="field">
+            <label for="serviceIcon">Icon / Emoji</label>
+            <input id="serviceIcon" placeholder="ðŸ¤–" required />
+          </div>
+          <div class="field">
+            <label for="serviceCategory">Category</label>
+            <input id="serviceCategory" placeholder="Automation" required />
+          </div>
+          <div class="field">
+            <label for="serviceImageFile">Upload Service Image</label>
+            <input id="serviceImageFile" type="file" accept=".jpg,.jpeg,.png,.webp,.gif,.bmp,.svg,.avif,.jfif,image/*" />
+            <div class="upload-actions">
+              <button class="btn btn-ghost btn-sm" id="removeServiceImageBtn" type="button">Remove Service Image</button>
+            </div>
+            <img id="serviceImagePreview" class="upload-preview" alt="Service image preview" />
+          </div>
+          <div class="field field-full">
+            <label for="serviceDescription">Description</label>
+            <textarea id="serviceDescription" rows="3" required></textarea>
+          </div>
+          <div class="field field-full">
+            <label for="serviceFeatures">Features (comma separated)</label>
+            <input id="serviceFeatures" placeholder="Consulting, Setup, Support" required />
+          </div>
+          <button class="btn" type="submit">Save Service</button>
+        </form>
+        <div id="servicesAdminList" class="admin-list"></div>
+      </section>
+
+      <section class="admin-card">
+        <h2>Service Items & Pricing (LKR)</h2>
+        <form id="offeringForm" class="admin-grid-form">
+          <input id="offeringId" type="hidden" />
+          <div class="field">
+            <label for="offeringServiceId">Main Service</label>
+            <select id="offeringServiceId" required></select>
+          </div>
+          <div class="field">
+            <label for="offeringName">Item Name</label>
+            <input id="offeringName" placeholder="Canva Pro" required />
+          </div>
+          <div class="field">
+            <label for="offeringPriceLkr">Price (LKR)</label>
+            <input id="offeringPriceLkr" type="number" min="0" step="1" placeholder="300" required />
+          </div>
+          <div class="field">
+            <label for="offeringImageFile">Upload Item Image</label>
+            <input id="offeringImageFile" type="file" accept=".jpg,.jpeg,.png,.webp,.gif,.bmp,.svg,.avif,.jfif,image/*" />
+            <div class="upload-actions">
+              <button class="btn btn-ghost btn-sm" id="removeOfferingImageBtn" type="button">Remove Item Image</button>
+            </div>
+            <img id="offeringImagePreview" class="upload-preview" alt="Service item preview" />
+          </div>
+          <button class="btn" type="submit">Save Item</button>
+        </form>
+        <div id="offeringsAdminList" class="admin-list"></div>
+      </section>
+
+      <section class="admin-card">
+        <h2>Order & Delivery Management</h2>
+        <div id="ordersList" class="admin-list"></div>
+      </section>
+
+      <section class="admin-card">
+        <h2>Data Backup</h2>
+        <div class="admin-flex-head">
+          <button id="exportBtn" type="button" class="btn">Export Data</button>
+          <label class="btn btn-ghost file-label">
+            Import Data
+            <input id="importInput" type="file" accept=".json" />
+          </label>
+        </div>
+        <p class="muted">Use export/import to move content between devices and keep backups before major edits.</p>
+      </section>
+    </div>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="image-manager.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
