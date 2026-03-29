@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Service Details | YAKAFINITY</title>
+  <meta name="description" content="Detailed view of YAKAFINITY service offerings." />
+  <link rel="icon" type="image/png" href="../admin-images/site-admin/brand/logo.png" />
+  <link rel="apple-touch-icon" href="../admin-images/site-admin/brand/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">
+        <img id="brandLogo" src="../admin-images/site-admin/brand/logo.png" alt="YAKAFINITY logo" />
+        <span id="brandName">YAKAFINITY</span>
+      </a>
+      <nav class="nav-links">
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="client-portal.html">Client Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section page-hero">
+      <div class="container">
+        <p class="eyebrow">Service Details</p>
+        <h1 id="serviceTitlePage" class="page-title">YAKAFINITY Service</h1>
+        <p id="serviceCategoryPage" class="lead">Premium service delivery with managed support.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <article class="service-detail-card">
+          <img id="serviceImagePage" src="" alt="Service image" />
+          <div>
+            <p id="serviceChip" class="chip">Category</p>
+            <h2 id="serviceHeading">Service</h2>
+            <p id="serviceDescriptionPage"></p>
+            <ul id="serviceFeaturesPage"></ul>
+            <div class="hero-cta">
+              <a id="orderThisServiceBtn" class="btn" href="contact.html">Order This Service</a>
+              <a class="btn btn-ghost" href="services.html">Back to Services</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Available Plans</p>
+          <h2>Choose Your Package</h2>
+        </div>
+        <div id="serviceOfferings" class="offerings-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p><strong id="footerName">YAKAFINITY</strong> | Premium Tech Services</p>
+      <p>Domain: <span id="brandDomain">www.yakafinity.com</span></p>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+  <script src="service-detail.js"></script>
+</body>
+</html>

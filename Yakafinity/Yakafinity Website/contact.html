@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact & Orders | YAKAFINITY</title>
+  <meta name="description" content="Contact YAKAFINITY and place your project order." />
+  <link rel="icon" type="image/png" href="../admin-images/site-admin/brand/logo.png" />
+  <link rel="apple-touch-icon" href="../admin-images/site-admin/brand/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">
+        <img id="brandLogo" src="../admin-images/site-admin/brand/logo.png" alt="YAKAFINITY logo" />
+        <span id="brandName">YAKAFINITY</span>
+      </a>
+      <nav class="nav-links">
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="client-portal.html">Client Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section page-hero">
+      <div class="container">
+        <p class="eyebrow" id="contactPageEyebrow">Contact</p>
+        <h1 class="page-title" id="contactPageTitle">Send Your Project Request</h1>
+        <p class="lead" id="contactPageIntro">Complete this form and we will manage your order from planning to delivery.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <form id="orderForm" class="order-form" data-order-form>
+          <div class="field">
+            <label for="clientName">Your Name</label>
+            <input id="clientName" name="clientName" required />
+          </div>
+          <div class="field">
+            <label for="clientEmail">Email</label>
+            <input id="clientEmail" name="clientEmail" type="email" required />
+          </div>
+          <div class="field">
+            <label for="serviceType">Service</label>
+            <select id="serviceType" name="serviceType" data-service-select required></select>
+          </div>
+          <div class="field">
+            <label for="projectBudget">Budget (USD)</label>
+            <input id="projectBudget" name="projectBudget" placeholder="500 - 5000" />
+          </div>
+          <div class="field">
+            <label for="deadline">Deadline</label>
+            <input id="deadline" name="deadline" type="date" />
+          </div>
+          <div class="field field-full">
+            <label for="details">Project Details</label>
+            <textarea id="details" name="details" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn">Submit Order</button>
+          <p id="orderMessage" class="form-message"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p><strong id="footerName">YAKAFINITY</strong> | Premium Tech Services</p>
+      <p><span id="footerDomainPrefix">Domain:</span> <span id="brandDomain">www.yakafinity.com</span></p>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
