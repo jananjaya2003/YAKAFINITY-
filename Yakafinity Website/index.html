@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YAKAFINITY | Premium Tech Services</title>
+  <meta name="description" content="YAKAFINITY delivers AI Solutions, Pro Accounts, Development, Marketing & Design, and Hosting & IT services." />
+  <link rel="icon" type="image/png" href="../admin-images/site-admin/brand/logo.png" />
+  <link rel="apple-touch-icon" href="../admin-images/site-admin/brand/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">
+        <img id="brandLogo" src="../admin-images/site-admin/brand/logo.png" alt="YAKAFINITY logo" />
+        <span id="brandName">YAKAFINITY</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="client-portal.html">Client Login</a>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode">
+          <span class="theme-icon">🌙</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow" id="homeHeroEyebrow">Premium Tech Service Provider</p>
+          <h1 id="heroTitle">Build Faster With YAKAFINITY</h1>
+          <p id="homeHeroIntro" class="lead">We design growth-focused digital systems, automate workflows with AI, and deliver reliable managed tech services.</p>
+          <div class="hero-cta">
+            <a id="homePrimaryCta" href="contact.html" class="btn">Start Your Order</a>
+            <a id="homeSecondaryCta" href="services.html" class="btn btn-ghost">Explore Services</a>
+          </div>
+          <ul class="trust-row" id="homeTrustRow"></ul>
+        </div>
+        <div class="hero-card">
+          <h2 id="homeExpertiseTitle">Core Expertise</h2>
+          <ul id="homeExpertiseList"></ul>
+          <p class="hero-card-foot">Domain Ready: <strong id="brandDomain">www.yakafinity.com</strong></p>
+        </div>
+      </div>
+      <div class="bg-orb orb-1"></div>
+      <div class="bg-orb orb-2"></div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow" id="homeFeaturedEyebrow">What We Offer</p>
+          <h2 id="homeFeaturedTitle">Featured Services (Top 5)</h2>
+        </div>
+        <div id="servicesGrid" class="services-grid"></div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow" id="homeProcessEyebrow">How We Work</p>
+          <h2 id="homeProcessTitle">Simple Process, Premium Delivery</h2>
+        </div>
+        <div class="process-grid" id="homeProcessGrid"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow" id="homeFinalEyebrow">Ready to Start</p>
+          <h2 id="homeFinalTitle">Move to the Contact Page to Place an Order</h2>
+        </div>
+        <div class="admin-card">
+          <p class="muted" id="homeFinalText">Use our dedicated contact/order page for clean submission and project details.</p>
+          <a id="homeFinalButton" href="contact.html" class="btn">Go to Contact & Orders</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p><strong id="footerName">YAKAFINITY</strong> | Premium Tech Services</p>
+      <p id="footerSecondaryText">Contact Info :- 072 100 5844</p>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+  <script>
+    // Theme toggle functionality
+    const html = document.documentElement;
+    const themeToggle = document.querySelector('[data-theme-toggle]');
+    const themeKey = 'yakafinity-theme';
+
+    // Load saved theme or use system preference
+    function initTheme() {
+      let savedTheme = localStorage.getItem(themeKey);
+      if (!savedTheme) {
+        savedTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      html.setAttribute('data-theme', savedTheme);
+      updateToggleIcon(savedTheme);
+    }
+
+    // Update icon based on theme
+    function updateToggleIcon(theme) {
+      const icon = themeToggle.querySelector('.theme-icon');
+      icon.textContent = theme === 'dark' ? '☀️' : '🌙';
+    }
+
+    // Toggle theme
+    function toggleTheme() {
+      const currentTheme = html.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem(themeKey, newTheme);
+      updateToggleIcon(newTheme);
+    }
+
+    // Initialize
+    initTheme();
+    themeToggle.addEventListener('click', toggleTheme);
+
+    // Listen to system theme changes
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+      if (!localStorage.getItem(themeKey)) {
+        const newTheme = e.matches ? 'dark' : 'light';
+        html.setAttribute('data-theme', newTheme);
+        updateToggleIcon(newTheme);
+      }
+    });
+  </script>
+</body>
+</html>
